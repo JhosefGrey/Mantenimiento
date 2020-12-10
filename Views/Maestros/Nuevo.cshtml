@@ -1,0 +1,17 @@
+﻿@model Mantenimiento.Models.ViewModels.MaestrosViewModelA
+@{
+    ViewBag.Title = "Añadir Maestro";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Nuevo","tb_maestro",FormMethod.Post)) {
+<div class="row">
+    <div class="col-lg-12">
+        @Html.LabelFor(d => d.apellido)
+        @Html.TextBoxFor(d => d.apellido, "", new { @class = "form-control" })
+        @Html.LabelFor(d => d.nombre)
+        @Html.TextBoxFor(d => d.nombre, "", new { @class = "form-control" })
+    </div>
+</div>
+}
